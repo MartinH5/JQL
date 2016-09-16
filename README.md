@@ -46,3 +46,23 @@ The design we use for queries involves many components as seen in the following 
 The purpose of JPA is to give us the ability to work with our data in an object-oriented way. To do so we have several persistent classes and one that isn’t which represent our entities. An entity represents a row in a table from the database. That entity can be handled by its manager which prepares our queries using the appropriate setter and getters from our entities. Unlike the SQL queries used with a connector, these are transactions that follow the principle of ACID. These methods belong to the entity manager are some of them are: persist(), find(), getTransaction().begin() and getTransaction().close(). 
 Persist persists our data, which mean it gets saved to our database. Find is a lookup operation and selects data from our database based on a parameter key. The begin and close methods are used to manage our transactions. 
 
+# JQL
+
+
+* How did we use persistence in the last semesters?
+
+Text files + input/output writers.
+MySQL database.
+
+* How we queried to a relational database.
+
+We used a connector object w. a JDBC driver to connect to the database.
+
+* Pros Cons with ORM framework.
+
+It makes it easier to focus on the Object Orieneted programming, rather than having to fiddly with the sql syntax, 
+JPA also adds a lot of tools that make the mapping easier with their prebuild tools. 
+
+The generated tables can end up rather unorganized - the structure wouldn't usually be ideal basically. 
+It also requires extra resources, whenever the database changes/grows, which probably becomes a huge issue
+if it's database service for thousands for users. 

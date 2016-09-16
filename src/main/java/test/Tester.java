@@ -16,10 +16,10 @@ public class Tester {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.mycompany_jpqlDemo_jar_1.0-SNAPSHOTPU");
         EntityManager em = emf.createEntityManager();
         EntityHandler eh = new EntityHandler(em);
+            
+        eh.createNewStudent("Bob", "Bobsen");
         
-        eh.createNewStudent("Patrick", "Johansen");
-        
-        Student student = eh.getStudentByFirstName("Patrick");
+        Student student = eh.getStudentByFirstName("Bob");
         student.addStudyPoint("Test", 5, 4);
     }
     
